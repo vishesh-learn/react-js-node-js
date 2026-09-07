@@ -1,0 +1,80 @@
+header {
+    padding: 1rem;
+    background: #e3d44c;
+
+    .connectButton {
+        padding: 0.5rem 0.7rem;
+        border-radius: 0.5rem;
+        border: none;
+        font-weight: bolder;
+        background: #01b808;
+        color: #e3d44c;
+
+        &.connected {
+            background: red;
+        }
+    }
+
+    .connection-count {
+        float: right;
+    }
+}
+
+.chat-window {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem;
+    overflow-y: hidden;
+    gap: 1rem;
+
+    .messages {
+        flex: 1;
+        overflow-y: auto;
+
+        .message {
+            background: #9e9e9e;
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            clear: both;
+            float: left;
+            max-width: calc(100% - 2rem);
+
+            &.own {
+                float: right;
+                background: #01b808;
+            }
+
+            .author {
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .not-connected-message {
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .message-form {
+        display: flex;
+        gap: 0.5rem;
+
+        #message-input {
+            flex: 1;
+            border-radius: 100rem;
+            border: 0;
+            padding: 0 1.5rem;
+        }
+
+        .send-message-button {
+            padding: 1rem 2rem;
+            border-radius: 100rem;
+            border: 0;
+        }
+    }
+}
